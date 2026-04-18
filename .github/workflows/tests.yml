@@ -19,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: ['8.3', '8.4', '8.5']
+        # Laravel 13 + Symfony 8 require PHP >= 8.4 (8.3 cannot install locked deps).
+        php-version: ['8.4', '8.5']
 
     steps:
       - name: Checkout code
